@@ -1,38 +1,116 @@
-.App {
+li {
+  list-style: none;
+}
+
+.List {
+  margin: 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-auto-rows: 60px;
+  grid-gap: 16px;
+}
+
+.List__item {
+  line-height: 60px;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
 }
 
-.App-link {
-  color: #61dafb;
+.List__item__button {
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background-color: inherit;
+  color: inherit;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.List__item__button:hover,
+.List__item__button:focus {
+  background-image: linear-gradient(rgb(0 0 0/20%) 0 0);
+  outline: 2px solid black;
+  outline-offset: 2px;
+}
+
+.List__item__button:active {
+  background-image: linear-gradient(rgb(0 0 0/40%) 0 0);
+}
+
+.List__item__button--selected {
+  text-decoration: underline;
+}
+
+.Selected_List {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Taken from https://clrs.cc/ */
+
+.List__item--navy {
+  background-color: #001f3f;
+}
+
+.List__item--blue {
+  background-color: #0074d9;
+}
+
+.List__item--aqua {
+  background-color: #7fdbff;
+}
+
+.List__item--teal {
+  background-color: #39cccc;
+}
+
+.List__item--olive {
+  background-color: #3d9970;
+}
+
+.List__item--green {
+  background-color: #2ecc40;
+}
+
+.List__item--lime {
+  background-color: #01ff70;
+}
+
+.List__item--yellow {
+  background-color: #ffdc00;
+}
+
+.List__item--orange {
+  background-color: #ff851b;
+}
+
+.List__item--red {
+  background-color: #ff4136;
+}
+
+.List__item--maroon {
+  background-color: #85144b;
+}
+
+.List__item--fuchsia {
+  background-color: #f012be;
+}
+
+.List__item--purple {
+  background-color: #b10dc9;
+}
+
+.List__item--black {
+  background-color: #111111;
+}
+
+.List__item--gray {
+  background-color: #aaaaaa;
+}
+
+.List__item--silver {
+  background-color: #dddddd;
 }
